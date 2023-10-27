@@ -38,7 +38,6 @@ fn print_file(
     for file in files {
         validate_file(file).unwrap();
         let contents = fs::read_to_string(file).expect("File Does not exist");
-        let mut blank_line_count = 0;
         for cur_line in contents.lines() {
             let mut line = String::from(cur_line);
 
